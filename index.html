@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What‑If Search Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <h1 class="brand">What‑If</h1>
+    <p class="tag">Explore a branch of history</p>
+  </header>
+
+  <main class="shell">
+    <section class="search-card">
+      <div class="search-row">
+        <input id="query" type="text" placeholder="What if..." aria-label="What-if query" />
+        <button id="go">Search</button>
+      </div>
+
+      <div class="controls">
+        <label class="toggle">
+          <span>Plausibility</span>
+          <input type="range" id="plausibility" min="0" max="100" value="70" />
+          <span>Novelty</span>
+        </label>
+      </div>
+
+      <div id="suggestions" class="chips"></div>
+    </section>
+
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+
+  <footer class="foot">
+    <span>Made for counterfactual exploration</span>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
